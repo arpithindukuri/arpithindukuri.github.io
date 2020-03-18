@@ -26,7 +26,7 @@ Sweet. I had the math down. The next step was to implement this in a language th
 
 After hours of googling, moving .dll and header files to different folders, any browsing I finally managed to get SFML working. Now that I had C++ libraries figured out, all that was left was to actually implement the code that would calculate and render the Mandelbrot Set. Surprisingly enough, this was the easy part, and pretty soon I had the following rendered:
 
-![image-center]({{ site.url }}{{ site.baseurl }}/assets/mandelbrot/mandelbrot%20-%202.PNG){: .align-center}
+![image-center]({{ site.url }}{{ site.baseurl }}/assets/mandelbrot/mandelbrot%20-%202.png){: .align-center}
 
 Cool. But whats the point of rendering a fractal if you couldnt zoom in?? And so I implemented some code that would zoom in to wherever you clicked. 
 
