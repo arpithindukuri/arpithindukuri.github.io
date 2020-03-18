@@ -30,9 +30,4 @@ After hours of googling, moving .dll and header files to different folders, any 
 
 Cool. But whats the point of rendering a fractal if you couldnt zoom in?? And so I implemented some code that would zoom in to wherever you clicked. 
 
-<figure class="third">
-	<img src="http://placehold.it/600x300.jpg">
-	<img src="http://placehold.it/600x300.jpg">
-	<img src="http://placehold.it/600x300.jpg">
-	<figcaption>Three images.</figcaption>
-</figure>
+![image-center]({{ site.url }}{{ site.baseurl }}/assets/mandelbrot/mandelbrot%20-%203.gif){: .align-center}
