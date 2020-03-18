@@ -12,11 +12,9 @@ Is there bad practice? Probably.  \n
 Is it cool? Heck yea."
 ---
 
-It was winter break.
+It was reading week. And we all know that nothing productive happens during reading week, but I was determined to change that.
 
-Finals season had just ended.
-
-Fueled by the residual motivation and general fear from the last semester, and inspired by [this video](https://www.youtube.com/watch?v=NGMRB4O922I) by Numberphile, I got to work on implementing my own version of the Mandelbrot Set. This is that story.
+Fueled by the residual motivation and general fear of midterms from the week before, and inspired by [this video](https://www.youtube.com/watch?v=NGMRB4O922I) by Numberphile, I got to work on implementing my own version of the Mandelbrot Set.
 
 The first step was to see if I had an understanding of the mandelbrot set, and the math behind it, in the first place. I didn't want to worry about the graphics libraries, or about making legible code. I just wanted to get something working, so I used [Processing](https://processing.org/). After writing out my code in 20 minutes, and going through the obligatory 40 minute bug checking (only to find out I switched a negative sign, or something equally trivial,) I had the following picture rendered on my screen:
 
@@ -31,3 +29,8 @@ After hours of googling, moving .dll and header files to different folders, any 
 Cool. But whats the point of rendering a fractal if you couldnt zoom in?? And so I implemented some code that would zoom in to wherever you clicked. 
 
 ![image-center]({{ site.url }}{{ site.baseurl }}/assets/mandelbrot/mandelbrot%20-%203.gif){: .align-center}
+
+Then I made another function that essentially registers mouse clicks on a certain point, simulating a user zooming in on that point, until a certain amount of zoom is reached. The program works by rendering a picture everytime a user clicks, and outputing a picture every time one is rendered. So after setting a point to zoom into, I had a folder full of pictures that I could edit together to create a video of the Mandelbrot Set!
+
+![image-center]({{ site.url }}{{ site.baseurl }}/assets/mandelbrot/mandelbrot%20-%204.gif){: .align-center}
+
