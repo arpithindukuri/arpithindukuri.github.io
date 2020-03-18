@@ -12,6 +12,8 @@ Is there bad practice? Probably.  \n
 Is it cool? Heck yea."
 ---
 
+#How it went down
+
 It was reading week. And we all know that nothing productive happens during reading week, but I was determined to change that.
 
 Fueled by the residual motivation and general fear of midterms from the week before, and inspired by [this video](https://www.youtube.com/watch?v=NGMRB4O922I) by Numberphile, I got to work on implementing my own version of the Mandelbrot Set.
@@ -26,7 +28,7 @@ After hours of googling, moving .dll and header files to different folders, any 
 
 ![image-center]({{ site.url }}{{ site.baseurl }}/assets/mandelbrot/mandelbrot%20-%202.png){: .align-center}
 
-Cool. But whats the point of rendering a fractal if you couldnt zoom in?? And so I implemented some code that would zoom in to wherever you clicked. 
+Cool. But whats the point of rendering a fractal if you couldnt zoom in? And so I wrote some code that would zoom in to wherever you clicked.
 
 ![image-center]({{ site.url }}{{ site.baseurl }}/assets/mandelbrot/mandelbrot%20-%203.gif){: .align-center}
 
@@ -34,3 +36,6 @@ Then I made another function that essentially registers mouse clicks on a certai
 
 ![image-center]({{ site.url }}{{ site.baseurl }}/assets/mandelbrot/mandelbrot%20-%204.gif){: .align-center}
 
+#What I learned
+
+* **'std::cout' is cool and all, but it is slow.** As I calculated the colour value for each pixel, I initially used 'std::cout' to print out the X and Y value of every single pixel for every single picture. This made a 5 second render take minutes to render, in some cases. If I understand correctly, this is because, when 'std::cout' is called, the [C++ program calls the kernel to execute the 'cout' or 'printf' function](https://stackoverflow.com/a/2443028), and [kernel calls take much longer than a multiplication or addition](http://ithare.com/infographics-operation-costs-in-cpu-clock-cycles/). Lesson learned, 'cout' line was removed, problem solved!
