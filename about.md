@@ -1,12 +1,12 @@
 ---
 layout: single
-title: 
+title: "tell me more..."
 permalink: /about/
 ---
 
 # About Me
 
-
+I am a second year software engineering student at the University of Calgary.
 
 # About this Blog
 
