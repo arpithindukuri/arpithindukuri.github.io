@@ -24,7 +24,7 @@ The first step was to see if I had an understanding of the mandelbrot set, and t
 
 Sweet. I had the math down. The next step was to implement this in a language that wasn't Processing. I had just finished a course where I learned C++, so that was the language I decided to use. I chose to use Visual Studio as my IDE, and after doing some research, I decided to use [SFML](https://www.sfml-dev.org/) as my graphics library. This is where my problems started. C++ libraries were the cause of much misery and pain.
 
-After hours of googling, moving .dll and header files to different folders, any browsing I finally managed to get SFML working. Now that I had C++ libraries figured out, all that was left was to actually implement the code that would calculate and render the Mandelbrot Set. Surprisingly enough, this was the easy part, and pretty soon I had the following rendered:
+After hours of googling, moving .dll and header files to different folders, and browsing stack exchange, I finally managed to get SFML working. Now that I had C++ libraries (kind of) figured out, all that was left was to actually implement the code that would calculate and render the Mandelbrot Set. Surprisingly enough, this was the easy part, and pretty soon I had the following rendered in C++:
 
 ![image-center]({{ site.url }}{{ site.baseurl }}/assets/mandelbrot/mandelbrot%20-%202.png){: .align-center}
 
@@ -32,7 +32,7 @@ Cool. But whats the point of rendering a fractal if you couldnt zoom in? And so 
 
 ![image-center]({{ site.url }}{{ site.baseurl }}/assets/mandelbrot/mandelbrot%20-%203.gif){: .align-center}
 
-Then I made another function that essentially registers mouse clicks on a certain point, simulating a user zooming in on that point, until a certain amount of zoom is reached. The program works by rendering a picture everytime a user clicks, and outputing a picture every time one is rendered. So after setting a point to zoom into, I had a folder full of pictures that I could edit together to create a video of the Mandelbrot Set!
+Then I made another function that essentially registers mouse clicks on a certain point, simulating a user zooming in on that point, until a certain amount of zoom is reached. The program works by rendering a picture everytime a user clicks, and outputing the picture as a PNG every time one is rendered. So after setting a point to zoom into and running the program for 20 minutes, I had a folder full of pictures, that I could edit together to create this video of the Mandelbrot Set!
 
 ![image-center]({{ site.url }}{{ site.baseurl }}/assets/mandelbrot/mandelbrot%20-%204.gif){: .align-center}
 
