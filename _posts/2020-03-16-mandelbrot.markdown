@@ -48,3 +48,6 @@ Then I made another function that essentially registers mouse clicks on a certai
 
 * **Write better code!** Part of the reason I didn't feature my code here is because its ugly. There was so much that was hard-coded, some bits are unnecessarily over-complicated, and parts of my code seem like they were meant to be temporary patches, but I never got around to properly implementing them. That being said, if you would still like to look at my code for the mandelbrot set, here is the Processing version, and here is the C++ version.
 
+* **Perhaps use multi-threading** to speed up the process. For example, if I were to render the above video again, instead of rendering each frame 1 at a time, I could render 8, or 16 at a time.
+
+* **More features!!!** Maybe recieve the point to zoom into as an argument. If I can figure out multi-threading and make other optimizations, I might be able to make this render in real time. 
