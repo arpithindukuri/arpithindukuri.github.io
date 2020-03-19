@@ -10,12 +10,13 @@ header:
 
 # About Me
 
-I am a second year software engineering student at the University of Calgary. I enjoy being a nerd, daydreaming about becoming a millionaire, and a good nights sleep (Doesn't happen very often, but I enjoy it).
+I am a second year software engineering student at the University of Calgary. I enjoy being a nerd, daydreaming about becoming a millionaire, and a good nights sleep (doesn't happen very often, but I enjoy it).
 
 # About this Blog
 
 This blog is a space for me to share projects I'm working on, or something cool I've learned. 
-This site will also double as my portfolio. In fact, considering I'm not a celebrity just yet, you probably got this link off my resume, in which case, welcome! I hope you like what you see here, and feedback will be much appreciated.
+This site will also double as my portfolio. In fact, considering I'm not a celebrity just yet, you probably got here through the link on my resume, in which case, welcome! I hope you like what you see here, and feedback will be much appreciated.
+As I get free time here and there, I will continue to update this site with more of my work.
 
 # About this Webpage
 
