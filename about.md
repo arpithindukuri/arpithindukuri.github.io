@@ -1,6 +1,6 @@
 ---
 layout: single
-title: \"so uh, tell me more...\"
+title: \"tell me more...\"
 permalink: /about/
 
 header:
