@@ -36,3 +36,5 @@ Anyway, this will defenitely be a great learning experience for me, so as far as
 I decided to use processing as a starting point for a few different reasons. The IDE is so easy to use, with nothing to setup. It's all plug and play. Processing offers many tools and graphical utilities out of the box, and this will help me visualize what I am doing nice and easily.
 
 I am using the [MNIST database of handwritten digits](http://yann.lecun.com/exdb/mnist/). It contains around 60,000 training examples and around 10,000 test images, all labeled and with ample documentation available online.
+
+This [very helpful post](https://discourse.processing.org/t/how-do-i-import-an-idx3-ubyte-file/3577/3) by Tsskyx at [discourse.processing.org](discourse.processing.org) allowed me to import the training set and labels into Processing quite painlessly.
