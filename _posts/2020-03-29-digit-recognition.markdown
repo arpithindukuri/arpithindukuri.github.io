@@ -15,7 +15,8 @@ excerpt: "Why was 6 afraid of 7?  \n
 
 How far am I? Not very...
 
-* Mar 29 2020 - I am currently figuring out the MNIST data file format (.idx3-ubyte... what??), and how I can get the images into ~~Processing~~ Python. 
+* Mar 29 2020 - ~~I am currently figuring out the MNIST data file format (.idx3-ubyte... what??), and how I can get the images into Python.~~ Done! I now know basic Python syntax and can word with the mnist data. ~30 minutes.
+* Apr 1 2020 - 
 
 # How it Started
 
@@ -38,4 +39,4 @@ Scratch this. I decided to learn Python and use that instead, for the following 
 
 I am using the [MNIST database of handwritten digits](http://yann.lecun.com/exdb/mnist/). It contains around 60,000 training examples and around 10,000 test images, all labeled and with ample documentation available online.
 
-~~This [very helpful post](https://discourse.processing.org/t/how-do-i-import-an-idx3-ubyte-file/3577/3) by Tsskyx at [discourse.processing.org](discourse.processing.org) allowed me to import the training set and labels into Processing quite painlessly.~~
+This [very helpful post](https://stackoverflow.com/a/40430149) by Laurent LAPORTE at Stack Overflow allowed me to import the training set and labels into Python quite painlessly.
