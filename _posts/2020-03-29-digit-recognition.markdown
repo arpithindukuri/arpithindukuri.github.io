@@ -15,7 +15,7 @@ excerpt: "Why was 6 afraid of 7?  \n
 
 How far am I? Not very...
 
-* Mar 29 2020 - I am currently figuring out the MNIST data file format (.idx3-ubyte... what??), and how I can get the images into Processing. 
+* Mar 29 2020 - I am currently figuring out the MNIST data file format (.idx3-ubyte... what??), and how I can get the images into ~~Processing~~ Python. 
 
 # How it Started
 
