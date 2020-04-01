@@ -33,7 +33,8 @@ Anyway, this will defenitely be a great learning experience for me, so as far as
 
 # How it Went Down
 
-I decided to use processing as a starting point for a few different reasons. The IDE is so easy to use, with nothing to setup. It's all plug and play. Processing offers many tools and graphical utilities out of the box, and this will help me visualize what I am doing nice and easily.
+~~I decided to use processing as a starting point for a few different reasons. The IDE is so easy to use, with nothing to setup. It's all plug and play. Processing offers many tools and graphical utilities out of the box, and this will help me visualize what I am doing nice and easily.~~
+Scratch this. I decided to learn Python and use that instead, for the following reasons. Firstly, it is such a ubiquitous language, I'd need to learn it at some point anyway. Secondly, there is so much support and resources for Python, especially with data science and machine learning applications. Thirdly, just like with processing, I am told that even though Python may not be the fastest to run it is very fast for development and redevelopment. So it will have all the benefits of using Processing, and then some more, at the cost of having to learn a new language. All in all I don't think it is a bad idea to start with Python.
 
 I am using the [MNIST database of handwritten digits](http://yann.lecun.com/exdb/mnist/). It contains around 60,000 training examples and around 10,000 test images, all labeled and with ample documentation available online.
 
