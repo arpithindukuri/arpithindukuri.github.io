@@ -38,4 +38,4 @@ Scratch this. I decided to learn Python and use that instead, for the following 
 
 I am using the [MNIST database of handwritten digits](http://yann.lecun.com/exdb/mnist/). It contains around 60,000 training examples and around 10,000 test images, all labeled and with ample documentation available online.
 
-This [very helpful post](https://discourse.processing.org/t/how-do-i-import-an-idx3-ubyte-file/3577/3) by Tsskyx at [discourse.processing.org](discourse.processing.org) allowed me to import the training set and labels into Processing quite painlessly.
+~~This [very helpful post](https://discourse.processing.org/t/how-do-i-import-an-idx3-ubyte-file/3577/3) by Tsskyx at [discourse.processing.org](discourse.processing.org) allowed me to import the training set and labels into Processing quite painlessly.~~
