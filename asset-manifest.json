@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/arpithindukuri/arpithindukuri.github.io/static/css/main.073c9b0a.css",
-    "main.js": "/arpithindukuri/arpithindukuri.github.io/static/js/main.177d1211.js",
-    "static/js/787.6cdad572.chunk.js": "/arpithindukuri/arpithindukuri.github.io/static/js/787.6cdad572.chunk.js",
-    "static/media/logo.svg": "/arpithindukuri/arpithindukuri.github.io/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
-    "index.html": "/arpithindukuri/arpithindukuri.github.io/index.html",
-    "main.073c9b0a.css.map": "/arpithindukuri/arpithindukuri.github.io/static/css/main.073c9b0a.css.map",
-    "main.177d1211.js.map": "/arpithindukuri/arpithindukuri.github.io/static/js/main.177d1211.js.map",
-    "787.6cdad572.chunk.js.map": "/arpithindukuri/arpithindukuri.github.io/static/js/787.6cdad572.chunk.js.map"
+    "main.css": "/static/css/main.073c9b0a.css",
+    "main.js": "/static/js/main.a273ef3c.js",
+    "static/js/787.6cdad572.chunk.js": "/static/js/787.6cdad572.chunk.js",
+    "static/media/logo.svg": "/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/index.html",
+    "main.073c9b0a.css.map": "/static/css/main.073c9b0a.css.map",
+    "main.a273ef3c.js.map": "/static/js/main.a273ef3c.js.map",
+    "787.6cdad572.chunk.js.map": "/static/js/787.6cdad572.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.073c9b0a.css",
-    "static/js/main.177d1211.js"
+    "static/js/main.a273ef3c.js"
   ]
 }
