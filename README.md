@@ -1,3 +1,15 @@
+# Info
+
+This Project was initialized using these tutorials:
+
+- https://www.freecodecamp.org/news/deploy-a-react-app-to-github-pages/
+
+To run, use command:
+
+```
+npm run deploy
+```
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
