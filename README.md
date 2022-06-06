@@ -3,6 +3,7 @@
 This Project was initialized using these tutorials:
 
 - https://www.freecodecamp.org/news/deploy-a-react-app-to-github-pages/
+- https://santhalakshminarayana.github.io/blog/build-blog-with-nextjs-mdx-and-deploy-to-github-pages
 
 To run, use command:
 
