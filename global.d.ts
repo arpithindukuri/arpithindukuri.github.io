@@ -20,7 +20,8 @@ declare global {
     }
 
     export interface Colors {
-      background: ColorShades;
+      lightBackground: ColorShades;
+      darkBackground: ColorShades;
       grey: ColorShades;
       red: ColorShades;
       orange: ColorShades;
@@ -50,7 +51,9 @@ declare global {
       15: string;
       16: string;
       20: string;
+      22: string;
       24: string;
+      28: string;
       32: string;
       40: string;
       48: string;
@@ -123,6 +126,30 @@ declare global {
       loose: string;
     }
 
+    export interface Bezier {
+      button: string;
+    }
+
+    export interface NeuShadow {
+      indentedSm: string;
+      indented: string;
+      raisedXs: string;
+      raisedSm: string;
+      raised: string;
+      simpleBorder: string;
+      lightUpBorder: string;
+      lightUpBorderHover: string;
+      lightUpBorderActive: string;
+    }
+
+    export interface NeuBG {
+      convex: {
+        lightBackground: string;
+        lightBackgroundDrop: string;
+        orange: string;
+      };
+    }
+
     export interface Theme {
       screens: Screens;
       colors: Colors;
@@ -134,6 +161,9 @@ declare global {
       fontWeight: FontWeight;
       letterSpacing: LetterSpacing;
       lineHeight: LineHeight;
+      bezier: Bezier;
+      neuShadow: NeuShadow;
+      neuBG: NeuBG;
     }
 
     // type ThemeConfig = import("./styles/Theme");

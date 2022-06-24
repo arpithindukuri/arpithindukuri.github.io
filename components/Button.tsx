@@ -1,71 +1,138 @@
-import { createUseStyles } from "react-jss";
+import { CSSProperties, useEffect, useState } from "react";
+import { createUseStyles, DefaultTheme } from "react-jss";
+import { theme } from "../styles/Theme";
 
 export const useStyles = createUseStyles((theme) => ({
-  button: {
-    padding: theme.spacing[8],
-    borderRadius: theme.borderRadius.lg,
+  wrapper: {
+    padding: theme.spacing[2],
+  },
+  button: (props: ButtonProps) => ({
+    padding: `${theme.spacing[4]} ${theme.spacing[4]}`,
+    borderRadius: theme.borderRadius.sm,
     border: "none",
-    // backgroundColor: theme.colors.background[500],
-    background: `linear-gradient(135deg, ${theme.colors.background[600]}, ${theme.colors.background[700]})`,
-    boxShadow: `6px 6px 12px rgba(0, 0, 0, 0.2), -6px -6px 12px rgba(253, 252, 235, 0.8),
-                inset 0 0 0 2px ${theme.colors.background[500]},
-                inset 0 0 0 6px ${theme.colors.background[700]},
-                inset 0 0 0 8px ${theme.colors.background[500]},
-                inset 0 0 2px 10px rgba(0, 0, 0, 0.2)`,
+    background: props.isOn
+      ? `${theme.neuBG.convex.orange}`
+      : `${theme.neuBG.convex.lightBackground}`,
+    boxShadow: props.isOn
+      ? `${theme.neuShadow.raisedXs}, ${theme.neuShadow.lightUpBorderHover}`
+      : `${theme.neuShadow.raisedXs}, ${theme.neuShadow.lightUpBorder}`,
     cursor: "pointer",
-    transition: "2s cubic-bezier(0.01, 0.98, 0.02, 0.99)",
-    "&:hover": {
-      "& $label": {
+    transition: `${theme.bezier.button}`,
+    WebkitTapHighlightColor: "transparent",
+    "&:hover, &:focus": {
+      "& $labelWrapper": {
         color: "#ffffff",
-        textShadow: "0 0 12px rgba(253, 252, 235, 0.8)",
+        textShadow: "0 0 10px rgba(255, 255, 255, 0.6)",
       },
-      boxShadow: `6px 6px 12px rgba(0, 0, 0, 0.2), -6px -6px 12px rgba(253, 252, 235, 0.8),
-                  inset 0 0 0 2px ${theme.colors.background[500]},
-                  inset 0 0 0 6px #ffffff,
-                  inset 0 0 0 8px ${theme.colors.background[500]},
-                  inset 0 0 2px 10px rgba(0, 0, 0, 0.2),
-                  0 0 80px 30px rgba(253, 252, 235, 0.8),
-                  inset 0 0 25px 4px rgba(253, 252, 235, 0.1)`,
-      backgroundColor: theme.colors.orange[500],
-      background: "linear-gradient(135deg, #ffca57, #e4a51c)",
+      boxShadow: `${theme.neuShadow.raisedXs}, ${theme.neuShadow.lightUpBorderHover}`,
+      background: `${theme.neuBG.convex.orange}`,
     },
     "&:active": {
-      "& $label": {
-        color: "#000000",
+      "& $labelWrapper": {
+        color: "#ffffff",
+        textShadow: "0 0 10px rgba(255, 255, 255, 0.6)",
         transform: "scale(0.95)",
       },
-      boxShadow: `6px 6px 12px rgba(0, 0, 0, 0.2), -6px -6px 12px rgba(253, 252, 235, 0.8),
-                  inset 0 0 0 2px ${theme.colors.background[500]},
-                  inset 0 0 0 6px #ffca57,
-                  inset 0 0 0 8px ${theme.colors.background[500]},
-                  inset 0 0 2px 13px rgba(0, 0, 0, 0.2),
-                  0 0 100px 6px #ffca57,
-                  inset 0 0 25px 4px #ffca57`,
-      backgroundColor: theme.colors.orange[500],
-      background: "linear-gradient(135deg, #ffca57, #e9a81c)",
+      boxShadow: `${theme.neuShadow.raisedXs}, ${theme.neuShadow.lightUpBorderActive}`,
+      background: `${theme.neuBG.convex.orange}`,
     },
-  },
-  label: {
+  }),
+  labelWrapper: (props: ButtonProps) => ({
+    display: "flex",
+    width: "100%",
+    height: "100%",
     fontWeight: "bold",
-    color: theme.colors.background[800],
+    color: props.isOn ? "#ffffff" : theme.colors.lightBackground[800],
+    textShadow: props.isOn
+      ? "0 0 10px rgba(255, 255, 255, 0.6)"
+      : `0 0 15px ${theme.colors.lightBackground[600]}`,
+    transition: `${theme.bezier.button}`,
     textTransform: "uppercase",
+    whiteSpace: "pre",
     fontSize: theme.fontSize.base,
-    transition: "2s cubic-bezier(0.01, 0.98, 0.02, 0.99)",
-    display: "inline-block",
+    lineHeight: theme.lineHeight.none,
+    letterSpacing: theme.spacing.px,
+    fontFamily: "LCDM2U",
+    verticalAlign: "center",
+  }),
+  label: {
+    width: "100%",
+    textAlign: "start",
   },
+  arrow: {},
 }));
 
 interface ButtonProps {
   children?: any;
   url?: string;
+  arrow?: boolean;
+  style?: CSSProperties;
+  fullWidth?: boolean;
+  isOn?: boolean;
 }
 
-export function Button({ children, ...props }: ButtonProps) {
-  const classes = useStyles();
+export default function Button({
+  children,
+  arrow = true,
+  fullWidth = false,
+  isOn = false,
+  ...props
+}: ButtonProps) {
+  const classes = useStyles({ isOn, theme });
+
+  const [suffix, setSuffix] = useState(" ❯ ");
+  const [isHovered, setIsHovered] = useState(false);
+
+  function updateSuffix(str: string) {
+    const result =
+      str.substring(str.length - 1, str.length) +
+      str.substring(0, str.length - 1);
+
+    return result;
+  }
+
+  useEffect(() => {
+    if (isHovered) {
+      const interval = setInterval(
+        () => setSuffix((prev) => updateSuffix(prev)),
+        250
+      );
+      return () => {
+        clearInterval(interval);
+      };
+    }
+  }, [isHovered]);
+
+  function handleMouseEnter() {
+    setIsHovered(true);
+  }
+
+  function handleMouseLeave() {
+    setIsHovered(false);
+    setSuffix(" ❯ ");
+  }
 
   return (
-    <button className={classes.button}>
-      <span className={classes.label}>{children}</span>
-    </button>
+    <div
+      className={classes.wrapper}
+      style={{
+        width: fullWidth === true ? "100%" : undefined,
+      }}
+    >
+      <button
+        className={classes.button}
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+        style={{
+          ...props.style,
+          width: fullWidth === true ? "100%" : undefined,
+        }}
+      >
+        <span className={classes.labelWrapper}>
+          <span className={classes.label}>{children}</span>
+          <span className={classes.arrow}>{arrow && ` ${suffix}`}</span>
+        </span>
+      </button>
+    </div>
   );
 }

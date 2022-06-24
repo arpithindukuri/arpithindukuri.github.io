@@ -1,12 +1,27 @@
 import "../styles/globals.css";
+import "../styles/fonts.css";
 import type { AppProps } from "next/app";
 import { ThemeProvider } from "react-jss";
 import { theme } from "../styles/Theme";
+import Layout from "../components/Layout";
+import injectSheet from "react-jss";
 
-export default function App({ Component, pageProps }: AppProps) {
+const style = {
+  "@global": {
+    body: {
+      backgroundColor: theme.colors.lightBackground[500],
+    },
+  },
+};
+
+function App({ Component, pageProps }: AppProps) {
   return (
     <ThemeProvider theme={theme}>
-      <Component {...pageProps} />
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
     </ThemeProvider>
   );
 }
+
+export default injectSheet(style)(App);
