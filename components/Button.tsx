@@ -8,7 +8,7 @@ export const useStyles = createUseStyles((theme) => ({
   },
   button: (props: ButtonProps) => ({
     padding: `${theme.spacing[4]} ${theme.spacing[4]}`,
-    borderRadius: theme.borderRadius.sm,
+    borderRadius: props.round ? theme.borderRadius.full : theme.borderRadius.sm,
     border: "none",
     background: props.isOn
       ? `${theme.neuBG.convex.orange}`
@@ -26,6 +26,9 @@ export const useStyles = createUseStyles((theme) => ({
       },
       boxShadow: `${theme.neuShadow.raisedXs}, ${theme.neuShadow.lightUpBorderHover}`,
       background: `${theme.neuBG.convex.orange}`,
+    },
+    "&:hover .githubIcon.path": {
+      fill: "#ffffff",
     },
     "&:active": {
       "& $labelWrapper": {
@@ -49,7 +52,7 @@ export const useStyles = createUseStyles((theme) => ({
     transition: `${theme.bezier.button}`,
     textTransform: "uppercase",
     whiteSpace: "pre",
-    fontSize: theme.fontSize.base,
+    fontSize: theme.fontSize.lg,
     lineHeight: theme.lineHeight.none,
     letterSpacing: theme.spacing.px,
     fontFamily: "LCDM2U",
@@ -69,6 +72,7 @@ interface ButtonProps {
   style?: CSSProperties;
   fullWidth?: boolean;
   isOn?: boolean;
+  round?: boolean;
 }
 
 export default function Button({
@@ -76,9 +80,10 @@ export default function Button({
   arrow = true,
   fullWidth = false,
   isOn = false,
+  round = false,
   ...props
 }: ButtonProps) {
-  const classes = useStyles({ isOn, theme });
+  const classes = useStyles({ isOn, round, theme });
 
   const [suffix, setSuffix] = useState(" ❯ ");
   const [isHovered, setIsHovered] = useState(false);

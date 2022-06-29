@@ -50,6 +50,7 @@ export default function Home() {
         <Button fullWidth>Resume</Button>
         <Button fullWidth>About</Button>
       </div>
+      <Image img={pic.src} height={pic.height} width={pic.width} />
     </div>
   );
 }
