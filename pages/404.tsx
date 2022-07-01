@@ -10,6 +10,7 @@ export default function ErrorPage() {
           layout="responsive"
           height="100%"
           width="100%"
+          alt="thinking emoji"
         />
         <div className="flex h-fit w-fit items-center space-x-4 text-xl font-light text-neutral-600">
           <div className="font-semibold">404</div>
