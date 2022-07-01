@@ -1,55 +1,49 @@
-# Credits
+## Credits
 
-Project forked from https://github.com/johnpolacek/nextjs-mdx-blog-starter.
+This project was initialized using instructions from https://www.section.io/engineering-education/static-nextjs-markdown-blog-typescript-mdx-tailwindcss/. Thank you very much [@Rose Waitherero](https://github.com/Rose-stack)!
 
-# Next.js MDX Blog Starter
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-Next.js MDX Blog Starter for building blogs with [Next.js](https://nextjs.org/) and [MDX](https://mdxjs.com/), including [Theme UI](https://theme-ui.com/home/) Component Design System, [Vercel Deployment](https://vercel.com/) and more.
+## Tech Stack
 
-View Demo at [nextjs-mdx-blog-starter.vercel.app](https://nextjs-mdx-blog-starter.vercel.app/)
+This project uses:
 
-## Deploy
+- Next.js
+  - Static Rendering
+  - MDX
+- TypeScript
+- React
+- TailwindCSS
 
-Build and deploy with vercel. [Install vercel](https://vercel.com/download) if you haven’t already
+## Getting Started
 
+First, run the development server:
+
+```bash
+npm run dev
+# or
+yarn dev
 ```
-npm install && vercel deploy
-```
 
-## Customize
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can set properties like your blog title, description, Google Analytics code, social media sharing image and more by editing `blog.config.js`
+You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
 
-Content for the about page, footer and blurb in the header are written in markdown/mdx. Find markdown content and blog post files in `src/markdown`.
+[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
 
-If you would like to add more data to your posts, such as author information or other meta data, simple add more fields to the [front matter](https://jekyllrb.com/docs/front-matter/) in your mdx files and add the field names to the `getStaticProps` function for the various pages that display posts. See also the official [Next.js Blog Starter](https://github.com/vercel/next.js/tree/canary/examples/blog-starter) which served as the basis for this project.
+The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
-To edit the styling of the site, such as colors, typography and spacing, you can make changes to the theme file at `src/layout/Theme.js`. It is also there you can define styles for dark mode, or remove it.
+## Learn More
 
-Of course, you can change or add to the existing components in `src/components/ui` or edit or create new pages in `src/pages` and `src/components/views`. 
+To learn more about Next.js, take a look at the following resources:
 
-To further customize the site, refer to the [Theme UI documentation](https://theme-ui.com/getting-started) for making and styling your own components.
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-## Writing Posts
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-To write a new post, create a new `.mdx` file in the `src/markdown/posts` directory.
+## Deploy on Vercel
 
-Update the front-matter for the post with its title, excerpt, cover image and the publication date. 
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-You can mark a post as a draft by adding `draft: true` to the front matter of the post and then it will only display in the local dev environment.
-
-#### Title
-
-The title will appear at the top of the post and will be used in the meta tags for the page.
-
-#### Excerpt
-
-The excerpt will appear on the posts listing and as the meta description for the post page. It can be formatted in markdown. 
-
-#### Cover Image
-
-If included, the cover image will be displayed above the excerpt and post content. It will also be the main image that appears when the post is shared on social media. Be sure to also set the cover image alt value for accessibility.
-
-
-
-
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
