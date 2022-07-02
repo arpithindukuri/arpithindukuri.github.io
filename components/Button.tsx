@@ -19,9 +19,11 @@ export function Button({
       text-neutral-500
       shadow-md
       transition-all
+      hover:-translate-y-0.5
       hover:bg-orange-600
       hover:text-white
       hover:shadow-lg
+      active:-translate-y-0
       active:bg-orange-600
       active:shadow-md
       ${className}`}

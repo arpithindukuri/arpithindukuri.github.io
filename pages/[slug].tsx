@@ -3,13 +3,12 @@ import { GetStaticProps, GetStaticPaths } from "next";
 import { useEffect } from "react";
 import { MDXRemote, MDXRemoteSerializeResult } from "next-mdx-remote";
 
-import { useMdxComponentsContext } from "../../context/mdxContext";
-import Thumbnail from "../../components/Thumbnail";
-import { IPost } from "../../types/post";
-import { getPost, getAllPosts } from "../../utils/mdxUtils";
-import Prerequisites from "../../components/Prerequisites";
+import { useMdxComponentsContext } from "../context/mdxContext";
+import { IPost } from "../types";
+import { getPost, getAllPosts } from "../utils/mdxUtils";
 import { ParsedUrlQuery } from "querystring";
-import Stacks from "../../components/Stacks";
+import Tags from "../components/Tags";
+import Image from "../components/Image";
 
 // props type
 type Props = {
@@ -19,36 +18,28 @@ type Props = {
 
 // components to render
 const components = {
-  Prerequisites,
-  Stacks,
+  Tags,
 };
 
 const PostPage: React.FC<Props> = ({ source, frontMatter }: Props) => {
   // get setters
-  const { setPrerequisites, setStacks } = useMdxComponentsContext();
+  const { setTags } = useMdxComponentsContext();
 
   useEffect(() => {
     // set prerequisites
-    setPrerequisites(frontMatter.prerequisites);
-    // set stacks
-    setStacks(frontMatter.stacks);
-  }, [
-    setPrerequisites,
-    setStacks,
-    frontMatter.prerequisites,
-    frontMatter.stacks,
-  ]);
+    setTags(frontMatter.tags);
+  }, [setTags, frontMatter.tags]);
 
   return (
     <div>
       <article className="prose prose-green">
         <div className="mb-4">
-          <Thumbnail title={frontMatter.title} src={frontMatter.thumbnail} />
+          <Image src={frontMatter.thumbnailPath} />
         </div>
 
         <h1>{frontMatter.title}</h1>
 
-        <p>{frontMatter.description}</p>
+        <div>{frontMatter.description}</div>
 
         <MDXRemote components={components} {...source} />
       </article>

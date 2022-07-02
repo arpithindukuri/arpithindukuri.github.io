@@ -1,8 +1,6 @@
-import Thumbnail from "../components/Thumbnail";
-import type { NextPage, GetStaticProps } from "next";
-import { IPost } from "../types/post";
+import type { NextPage } from "next";
+import { IPost } from "../types";
 import Link from "next/link";
-import { getAllPosts } from "../utils/mdxUtils";
 import { Button } from "../components/Button";
 
 // props type
@@ -11,7 +9,7 @@ type Props = {
 };
 
 // component render function
-const Home: NextPage<Props> = ({ posts }: Props) => {
+const Home: NextPage<Props> = () => {
   return (
     <div className="flex min-h-full w-full flex-col space-y-20 p-16 md:flex-row md:space-y-0">
       <div className="flex min-h-full w-full flex-auto items-center justify-center">
@@ -40,17 +38,3 @@ const Home: NextPage<Props> = ({ posts }: Props) => {
 };
 
 export default Home;
-
-// get posts from serverside at build time
-export const getStaticProps: GetStaticProps = async () => {
-  const posts = getAllPosts([
-    "title",
-    "slug",
-    "date",
-    "description",
-    "thumbnail",
-  ]);
-
-  // retunr the posts props
-  return { props: { posts } };
-};

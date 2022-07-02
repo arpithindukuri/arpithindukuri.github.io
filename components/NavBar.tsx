@@ -50,7 +50,7 @@ export default function NavBar() {
           {navLinks.map((item) => (
             <Link href={item.href} key={`navlink-${item.text}`}>
               <a
-                className={`transition active:text-orange-700
+                className={`font-medium transition active:text-orange-700
                 ${
                   router.pathname === item.href
                     ? "text-orange-600"

@@ -1,39 +1,36 @@
-import Thumbnail from "../components/Thumbnail";
 import type { NextPage, GetStaticProps } from "next";
-import { IPost } from "../types/post";
-import Link from "next/link";
+import { IPost } from "../types";
 import { getAllPosts } from "../utils/mdxUtils";
+import { PortfolioCard } from "../components/PortfolioCard";
 
 // props type
 type Props = {
-  posts: [IPost];
+  posts: IPost[];
 };
 
 // component render function
 const Portfolio: NextPage<Props> = ({ posts }: Props) => {
   return (
-    <div>
-      <h1 className="text-4xl font-bold mb-4">Portfolio</h1>
+    <div className="space-y-16 px-8 py-4 md:px-16 xl:px-32">
+      {/* <div className="prose">
+        <h1 className="text-neutral-500">Portfolio</h1>
+      </div> */}
 
-      <div className="space-y-12">
+      <div className="grid grid-cols-1 gap-8 md:grid-cols-2 md:gap-12 xl:grid-cols-3 xl:gap-16">
         {posts.map((post) => (
-          <div key={post.slug}>
-            <div className="mb-4">
-              <Thumbnail
-                slug={post.slug}
-                title={post.title}
-                src={post.thumbnail}
-              />
-            </div>
-
-            <h2 className="text-2xl font-bold mb-4">
-              <Link href={`/posts/${post.slug}`}>
-                <a>{post.title}</a>
-              </Link>
-            </h2>
-
-            <p>{post.description}</p>
-          </div>
+          <PortfolioCard post={post} />
+        ))}
+        {posts.map((post) => (
+          <PortfolioCard post={post} />
+        ))}
+        {posts.map((post) => (
+          <PortfolioCard post={post} />
+        ))}
+        {posts.map((post) => (
+          <PortfolioCard post={post} />
+        ))}
+        {posts.map((post) => (
+          <PortfolioCard post={post} />
         ))}
       </div>
     </div>
@@ -49,7 +46,7 @@ export const getStaticProps: GetStaticProps = async () => {
     "slug",
     "date",
     "description",
-    "thumbnail",
+    "thumbnailPath",
   ]);
 
   // retunr the posts props

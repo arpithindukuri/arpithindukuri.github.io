@@ -7,12 +7,11 @@ import {
   ReactNode,
   SetStateAction,
 } from "react";
+import { ITag } from "../types";
 
 type ContextProps = {
-  prerequisites: string[];
-  setPrerequisites: Dispatch<SetStateAction<string[]>>;
-  stacks: string[];
-  setStacks: Dispatch<SetStateAction<string[]>>;
+  tags: ITag[];
+  setTags: Dispatch<SetStateAction<ITag[]>>;
 };
 
 type Props = {
@@ -22,18 +21,10 @@ type Props = {
 const MdxComponentsContext = createContext({} as ContextProps);
 
 export function MdxComponentsProvider({ children }: Props): ReactElement {
-  const [prerequisites, setPrerequisites] = useState<string[]>([]);
-  const [stacks, setStacks] = useState<string[]>([]);
+  const [tags, setTags] = useState<ITag[]>([]);
 
   return (
-    <MdxComponentsContext.Provider
-      value={{
-        prerequisites,
-        setPrerequisites,
-        stacks,
-        setStacks,
-      }}
-    >
+    <MdxComponentsContext.Provider value={{ tags, setTags }}>
       {children}
     </MdxComponentsContext.Provider>
   );
