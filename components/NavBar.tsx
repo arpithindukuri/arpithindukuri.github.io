@@ -11,7 +11,7 @@ interface INavLink {
 
 const navLinks: INavLink[] = [
   { text: "Home", href: "/" },
-  { text: "Portfolio", href: "/portfolio" },
+  { text: "Portfolio", href: "/p" },
   { text: "About", href: "/about" },
 ];
 
@@ -22,7 +22,7 @@ export default function NavBar() {
 
   return (
     // header value
-    <header className="sticky top-0 flex bg-white p-6 shadow-md transition-all">
+    <header className="sticky top-0 flex bg-neutral-200 p-6 shadow-md transition-all ">
       <Link href="/">
         <a className="flex items-center text-xl text-neutral-400 transition-all hover:text-neutral-900">
           <div>d1</div>

@@ -8,6 +8,10 @@ module.exports = {
   variants: {},
   theme: {
     extend: {
+      brightness: {
+        30: ".3",
+        60: ".6",
+      },
       boxShadow: {
         "1-up":
           "0 -3px 8px -4px rgba(0, 0, 0, 0.08), 0 -4.5px 14px 0 rgba(0, 0, 0, 0.05), 0 -6px 24px 8px rgba(0, 0, 0, 0.03)",

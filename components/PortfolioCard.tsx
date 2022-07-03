@@ -8,12 +8,10 @@ export type Props = {
 };
 
 export function PortfolioCard({ post }: Props) {
-  const href = `/${post.slug}`;
+  const href = `/p/${post.slug}`;
 
   return (
-    <div
-      className="flex h-full flex-col overflow-hidden rounded-md p-4 text-neutral-600 shadow-1-down transition-all hover:-translate-y-1 hover:scale-101 hover:text-neutral-900 hover:shadow-2 active:translate-y-0 active:scale-100 active:shadow-1-down"
-    >
+    <div className="flex h-full flex-col overflow-hidden rounded-md p-4 text-neutral-600 shadow-1-down transition-all hover:-translate-y-1 hover:scale-101 hover:text-neutral-900 hover:shadow-2 active:translate-y-0 active:scale-100 active:shadow-1-down">
       <div className="mb-4">
         <div>
           <Link href={href}>

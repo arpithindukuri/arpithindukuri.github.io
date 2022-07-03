@@ -1,15 +1,13 @@
 import { useMdxComponentsContext } from "../context/mdxContext";
+import Tag from "./Tag";
 
 export default function Tags() {
   const tags = useMdxComponentsContext().tags;
   return (
-    <>
-      <h3>Tags</h3>
-      <ol>
-        {tags.map((tag, index) => (
-          <li key={index}>{tag.name}</li>
-        ))}
-      </ol>
-    </>
+    <div className="flex max-w-full space-x-8">
+      {tags.map((tag, index) => (
+        <Tag key={index} tag={tag} />
+      ))}
+    </div>
   );
 }
