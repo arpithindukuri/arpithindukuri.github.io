@@ -4,7 +4,7 @@ const colors = require("tailwindcss/colors");
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   plugins: [require("@tailwindcss/typography")],
-  purge: ["./components/**/*.tsx", "./pages/**/*.tsx"],
+  content: ["./components/**/*.tsx", "./pages/**/*.tsx"],
   variants: {},
   theme: {
     extend: {
@@ -54,5 +54,4 @@ module.exports = {
       },
     },
   },
-  darkMode: false,
 };
