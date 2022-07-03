@@ -18,19 +18,7 @@ const Portfolio: NextPage<Props> = ({ posts }: Props) => {
 
       <div className="grid grid-cols-1 gap-8 md:grid-cols-2 md:gap-12 xl:grid-cols-3 xl:gap-16">
         {posts.map((post) => (
-          <PortfolioCard post={post} />
-        ))}
-        {posts.map((post) => (
-          <PortfolioCard post={post} />
-        ))}
-        {posts.map((post) => (
-          <PortfolioCard post={post} />
-        ))}
-        {posts.map((post) => (
-          <PortfolioCard post={post} />
-        ))}
-        {posts.map((post) => (
-          <PortfolioCard post={post} />
+          <PortfolioCard key={post.slug} post={post} />
         ))}
       </div>
     </div>

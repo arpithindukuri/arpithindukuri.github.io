@@ -2,6 +2,7 @@ import { default as NextImage } from "next/image";
 
 interface Props {
   src: string;
+  alt: string;
 }
 
 export default function Image(props: Props) {
@@ -11,7 +12,7 @@ export default function Image(props: Props) {
       height={800}
       width={1200}
       src={props.src}
-      alt={`Image: ${props.src}`}
+      alt={props.alt}
       objectFit="cover"
     />
   );

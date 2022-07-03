@@ -34,7 +34,10 @@ const PostPage: React.FC<Props> = ({ source, frontMatter }: Props) => {
     <div>
       <article className="prose prose-green">
         <div className="mb-4">
-          <Image src={frontMatter.thumbnailPath} />
+          <Image
+            src={frontMatter.thumbnailPath}
+            alt={`image: ${frontMatter.thumbnailPath.split(".")[0]}`}
+          />
         </div>
 
         <h1>{frontMatter.title}</h1>
