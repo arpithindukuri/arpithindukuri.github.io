@@ -2,10 +2,16 @@ import { ITag } from "../types";
 import colors from "tailwindcss/colors";
 import Image from "next/image";
 
-export default function Tag({ tag }: { tag: ITag }) {
+export default function Tag({
+  tag,
+  className,
+}: {
+  tag: ITag;
+  className?: string;
+}) {
   return (
     <div
-      className="flex
+      className={`flex
       h-max
       items-center
       space-x-4
@@ -16,7 +22,8 @@ export default function Tag({ tag }: { tag: ITag }) {
       font-semibold
       uppercase
       text-neutral-100
-      shadow-tag"
+      shadow-tag
+      ${className}`}
       style={{ backgroundColor: `${tag.color || colors.neutral[500]}` }}
     >
       {tag.iconPath && (
