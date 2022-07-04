@@ -10,26 +10,27 @@ export function Button({
 >) {
   return (
     <button
-      className={`rounded-xl
-      bg-neutral-100
-      p-4
+      className={`
+      group
+      rounded-2xl
+      bg-neutral-200
+      py-4
+      px-6
       text-base
       font-semibold
       uppercase
       text-neutral-500
-      shadow-md
+      shadow-button
       transition-all
-      hover:-translate-y-0.5
-      hover:bg-orange-600
+      hover:bg-orange-500
       hover:text-white
-      hover:shadow-lg
-      active:-translate-y-0
+      hover:shadow-buttonHover
       active:bg-orange-600
-      active:shadow-md
+      active:shadow-buttonActive
       ${className}`}
       {...props}
     >
-      {children}
+      <div className="group-active:scale-95">{children}</div>
     </button>
   );
 }

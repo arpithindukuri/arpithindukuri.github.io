@@ -32,9 +32,11 @@ export const getStaticProps: GetStaticProps = async () => {
   const posts = getAllPosts([
     "title",
     "slug",
-    "date",
+    "dateCreated",
+    "dateUpdated",
     "description",
     "thumbnailPath",
+    "tags",
   ]);
 
   // retunr the posts props

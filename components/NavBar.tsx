@@ -22,9 +22,9 @@ export default function NavBar() {
 
   return (
     // header value
-    <header className="sticky top-0 flex bg-neutral-200 p-6 shadow-md transition-all ">
+    <header className="sticky top-0 flex bg-neutral-200 p-6 shadow-md transition-all z-50">
       <Link href="/">
-        <a className="flex items-center text-xl text-neutral-400 transition-all hover:text-neutral-900">
+        <a className="flex items-center text-xl text-neutral-500 transition-all hover:text-white active:text-orange-600">
           <div>d1</div>
           <div className="font-bold text-orange-600">dev</div>
           <div>.io</div>
@@ -37,7 +37,7 @@ export default function NavBar() {
         }`}
       >
         <Button
-          className="prose-lg flex h-fit w-fit max-w-none flex-col py-1 px-6 font-medium text-neutral-400 hover:text-white md:hidden"
+          className="prose-lg flex h-fit w-fit max-w-none flex-col py-4 px-6 font-medium text-neutral-500 hover:text-white md:hidden"
           onClick={() => setIsOpen((prev) => !prev)}
         >
           {isOpen ? "╳" : "☰"}
@@ -50,11 +50,11 @@ export default function NavBar() {
           {navLinks.map((item) => (
             <Link href={item.href} key={`navlink-${item.text}`}>
               <a
-                className={`font-medium transition active:text-orange-700
+                className={`font-medium transition active:text-orange-600
                 ${
                   router.pathname === item.href
                     ? "text-orange-600"
-                    : "text-neutral-400 hover:text-neutral-900"
+                    : "text-neutral-500 hover:text-white"
                 }`}
               >
                 {item.text}

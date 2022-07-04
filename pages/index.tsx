@@ -25,7 +25,7 @@ const Home: NextPage<Props> = () => {
           <Link href="/">
             <Button>Home</Button>
           </Link>
-          <Link href="/portfolio">
+          <Link href="/p">
             <Button>Portfolio</Button>
           </Link>
           <Link href="/about">

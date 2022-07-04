@@ -32,9 +32,9 @@ const PostPage: React.FC<Props> = ({ source, frontMatter }: Props) => {
 
   return (
     <div>
-      <article className="prose-lg prose-neutral max-w-none">
+      <article className="prose-lg prose-neutral max-w-none p-8">
         <header className="relative flex h-fit w-full flex-col space-y-16 overflow-hidden p-8 pb-24">
-          <div className="absolute top-0 left-0 -z-10 h-full w-full">
+          <div className="absolute top-0 left-0 h-full w-full">
             {/* <Image
               className="m-0 max-w-none blur-sm bg-fixed"
               src={frontMatter.thumbnailPath}
@@ -44,26 +44,27 @@ const PostPage: React.FC<Props> = ({ source, frontMatter }: Props) => {
               layout="responsive"
             /> */}
             <div
-              className="absolute top-0 left-0 h-full w-full bg-cover bg-fixed bg-center bg-no-repeat blur-sm"
+              className="absolute top-0 left-0 h-full w-full bg-cover bg-fixed bg-center bg-no-repeat blur-md"
               style={{ backgroundImage: `url(${frontMatter.thumbnailPath})` }}
             />
-            <div className="absolute top-0 left-0 h-full w-full bg-black opacity-50" />
+            <div className="absolute top-0 left-0 h-full w-full bg-slate-900 opacity-50" />
+            <div className="absolute top-0 left-0 h-full w-full shadow-image" />
           </div>
 
-          <h1 className="font-extrabold text-neutral-100">
+          <h1 className="z-10 font-extrabold text-white">
             {frontMatter.title}
           </h1>
 
-          <h2 className="font-medium text-neutral-100">
+          <h2 className="z-10 font-medium text-white">
             {frontMatter.description}
           </h2>
 
-          <div className="flex w-full justify-between">
+          <div className="z-10 flex w-full justify-between">
             <Tags />
           </div>
         </header>
 
-        <div className="px-8 py-8">
+        <div className="px-8 py-8 md:px-16 lg:px-32">
           <MDXRemote components={components} {...source} />
         </div>
       </article>
