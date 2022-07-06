@@ -21,6 +21,7 @@ export function PortfolioCard({ post }: Props) {
           className="
                     group
                     flex
+                    h-full
                     flex-col
                     overflow-hidden
                     rounded-2xl

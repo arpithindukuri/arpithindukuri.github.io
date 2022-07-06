@@ -51,20 +51,31 @@ const PostPage: React.FC<Props> = ({ source, frontMatter }: Props) => {
             <div className="absolute top-0 left-0 h-full w-full shadow-image" />
           </div>
 
-          <h1 className="z-10 font-extrabold text-white">
+          <h1 className="z-10 font-extrabold text-neutral-50">
             {frontMatter.title}
           </h1>
 
-          <h2 className="z-10 font-medium text-white">
-            {frontMatter.description}
-          </h2>
+          <p className="z-10 text-neutral-50">{frontMatter.description}</p>
 
           <div className="z-10 flex w-full justify-between">
             <Tags />
           </div>
         </header>
 
-        <div className="px-8 py-8 md:px-16 lg:px-32">
+        <div
+          className="
+          prose-base
+          py-8
+          text-neutral-700
+          prose-headings:font-bold
+          prose-a:text-orange-600
+          prose-a:transition-all
+          hover:prose-a:underline
+          prose-ul:list-disc
+          md:px-24
+          lg:px-48
+          xl:px-72"
+        >
           <MDXRemote components={components} {...source} />
         </div>
       </article>

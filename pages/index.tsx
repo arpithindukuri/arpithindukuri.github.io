@@ -15,9 +15,9 @@ const Home: NextPage<Props> = () => {
       <div className="flex min-h-full w-full flex-auto items-center justify-center">
         <div className="prose-lg flex h-fit w-fit max-w-none flex-col font-medium text-neutral-400">
           <h3 className="m-0">Hi, I&apos;m</h3>
-          <h1 className="m-0 font-semibold text-orange-600">Danny,</h1>
-          <h3 className="m-0 mt-16">Welcome to my</h3>
-          <h1 className="m-0 font-semibold text-neutral-700">Portfolio</h1>
+          <h1 className="m-0 font-semibold text-orange-600">Danny</h1>
+          <h3 className="m-0 mt-16">Welcome to</h3>
+          <h1 className="m-0 font-semibold text-neutral-700">d1dev.io</h1>
         </div>
       </div>
       <div className="flex min-h-full w-full items-center justify-center">

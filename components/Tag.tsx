@@ -29,7 +29,7 @@ export default function Tag({
       {tag.iconPath && (
         <div className="relative flex flex-shrink">
           <Image
-            className="m-0 brightness-[1.75]"
+            className="m-0 brightness-[1.4] contrast-[3] saturate-50"
             src={tag.iconPath}
             alt=""
             height={20}

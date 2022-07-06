@@ -6,6 +6,8 @@ export interface IPost {
   thumbnailPath: string;
   tags: ITag[];
   slug: string;
+  githubLink?: string;
+  liveDemoLink?: string;
 }
 
 export interface ITag {
