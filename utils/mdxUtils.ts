@@ -1,4 +1,4 @@
-import matter from "gray-matter";
+import matter, { GrayMatterFile } from "gray-matter";
 import { join } from "path";
 import fs from "fs";
 import { verify } from "crypto";
@@ -10,14 +10,15 @@ type Items = {
 };
 
 // structure of a post
-type Post = {
-  data: {
-    // each post has a parameter key that takes the value of a string
-    [key: string]: string;
-  };
-  // each post will include the post content associated with its parameter key
-  content: string;
-};
+type Post = GrayMatterFile<string>;
+// type Post = {
+//   data: {
+//     // each post has a parameter key that takes the value of a string
+//     [key: string]: string;
+//   };
+//   // each post will include the post content associated with its parameter key
+//   content: string;
+// };
 
 // path to our list of available posts
 const POSTS_PATH = join(process.cwd(), "posts");
@@ -40,9 +41,9 @@ export function getPost(slug: string): Post {
   // post's content
   const fileContents = fs.readFileSync(fullPath, "utf-8");
   // get the front matter data and content
-  const { data, content } = matter(fileContents);
+  const result = matter(fileContents);
   // return the front matter data and content
-  return { data, content };
+  return result;
 }
 
 // load the post items

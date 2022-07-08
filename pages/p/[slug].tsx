@@ -2,6 +2,7 @@ import { serialize } from "next-mdx-remote/serialize";
 import { GetStaticProps, GetStaticPaths } from "next";
 import { useEffect } from "react";
 import { MDXRemote, MDXRemoteSerializeResult } from "next-mdx-remote";
+import remarkGfm from "remark-gfm";
 
 import { useMdxComponentsContext } from "../../context/mdxContext";
 import { IPost } from "../../types";
@@ -76,7 +77,7 @@ const PostPage: React.FC<Props> = ({ source, frontMatter }: Props) => {
           lg:px-48
           xl:px-72"
         >
-          <MDXRemote components={components} {...source} />
+          <MDXRemote {...source} components={components} scope={frontMatter} />
         </div>
       </article>
     </div>
@@ -94,7 +95,10 @@ export const getStaticProps: GetStaticProps = async (context) => {
   // get the slug
   const { content, data } = getPost(slug);
   // serialize the data on the server side
-  const mdxSource = await serialize(content, { scope: data });
+  const mdxSource = await serialize(content, {
+    scope: data,
+    mdxOptions: { remarkPlugins: [remarkGfm] },
+  });
   return {
     props: {
       source: mdxSource,

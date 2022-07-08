@@ -15,3 +15,11 @@ a {
 * {
   box-sizing: border-box;
 }
+
+.contains-task-list {
+  padding: 0 !important;
+}
+
+.task-list-item {
+  list-style-type: none;
+}
