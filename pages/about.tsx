@@ -9,7 +9,7 @@ type Props = {
 };
 
 // component render function
-const Home: NextPage<Props> = () => {
+const About: NextPage<Props> = () => {
   return (
     <div className="flex min-h-full w-full flex-col space-y-20 p-16 md:flex-row md:space-y-0">
       <div className="flex min-h-full w-full flex-auto items-center justify-center">
@@ -20,26 +20,29 @@ const Home: NextPage<Props> = () => {
           <h1 className="m-0 font-semibold text-orange-600 sm:ml-0 md:ml-16 lg:ml-24 xl:ml-32">
             Daniel
           </h1>
-          <h3 className="m-0 mt-8 sm:ml-0 md:ml-16 lg:ml-24 xl:ml-32">
-            Welcome to
-          </h3>
-          <h1 className="m-0 font-semibold text-neutral-700 sm:ml-0 md:ml-16 lg:ml-24 xl:ml-32">
-            d1dev.io
-          </h1>
           <span className="m-0 mt-8 sm:ml-0 md:ml-16 lg:ml-24 xl:ml-32">
-            This site is a portfolio of my work. You can see my portfolio by
-            clicking on "Portfolio". If you want to learn more about me, or see
-            my resume, please click on "About".
+            I recently graduated with a double major in Software Engineering and
+            Finance from the University of Calgary. I started my career doing
+            software contracts as a freelancer, and am currently working on
+            CaterQuick, a passion project of mine.
+          </span>
+          <span className="m-0 mt-2 sm:ml-0 md:ml-16 lg:ml-24 xl:ml-32">
+            If you would like to get in touch with me, or learn more about my
+            professional experience, please find me Email, LinkedIn, and other
+            information in my resume.
           </span>
         </div>
       </div>
       <div className="flex min-h-full w-full items-center justify-center">
         <div className="flex h-fit w-fit flex-col space-y-12">
+          <Link href="/">
+            <Button>Home</Button>
+          </Link>
           <Link href="/p">
             <Button>Portfolio</Button>
           </Link>
-          <Link href="/about">
-            <Button>About</Button>
+          <Link href="/assets/Resume - Arpith (Daniel) Indukuri.pdf">
+            <Button>Resume</Button>
           </Link>
         </div>
       </div>
@@ -47,4 +50,4 @@ const Home: NextPage<Props> = () => {
   );
 };
 
-export default Home;
+export default About;
