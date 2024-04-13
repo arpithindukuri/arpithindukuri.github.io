@@ -28,8 +28,8 @@ const Home: NextPage<Props> = () => {
           </h1>
           <span className="m-0 mt-8 sm:ml-0 md:ml-16 lg:ml-24 xl:ml-32">
             This site is a portfolio of my work. You can see my portfolio by
-            clicking on "Portfolio". If you want to learn more about me, or see
-            my resume, please click on "About".
+            clicking on &quot;Portfolio&quot;. If you want to learn more about
+            me, or see my resume, please click on &quot;About&quot;.
           </span>
         </div>
       </div>
