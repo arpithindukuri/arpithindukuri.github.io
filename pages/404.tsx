@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from "next/legacy/image";
 
 export default function ErrorPage() {
   return (
@@ -8,8 +8,8 @@ export default function ErrorPage() {
           className="opacity-30 grayscale"
           src="/assets/thinking.svg"
           layout="responsive"
-          height="100%"
-          width="100%"
+          height={400}
+          width={400}
           alt="thinking emoji"
         />
         <div className="flex h-fit w-fit items-center space-x-4 text-xl font-light text-neutral-600">

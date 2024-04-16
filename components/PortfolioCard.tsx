@@ -1,6 +1,6 @@
 import { IPost } from "../types";
 import Link from "next/link";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import Tag from "./Tag";
 import { useMdxComponentsContext } from "../context/mdxContext";
 import { useEffect } from "react";
@@ -15,7 +15,7 @@ export function PortfolioCard({ post }: Props) {
   const href = `/p/${post.slug}`;
 
   return (
-    <Link href={href}>
+    <Link legacyBehavior href={href}>
       <a aria-label={post.title}>
         <div
           className="

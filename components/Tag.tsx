@@ -1,6 +1,6 @@
 import { ITag } from "../types";
 import colors from "tailwindcss/colors";
-import Image from "next/image";
+import Image from "next/legacy/image";
 
 export default function Tag({
   tag,

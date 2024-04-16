@@ -1,8 +1,8 @@
 // Import the link props
 import Link from "next/link";
-import { useRouter } from "next/router";
 import { useState } from "react";
 import { Button } from "./Button";
+import { usePathname, useRouter } from "next/navigation";
 
 interface INavLink {
   text: string;
@@ -18,12 +18,13 @@ const navLinks: INavLink[] = [
 // add the React NavBar Element
 export default function NavBar() {
   const router = useRouter();
+  const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     // header value
-    <header className="sticky top-0 flex bg-neutral-200 p-6 shadow-md transition-all z-50">
-      <Link href="/">
+    <header className="sticky top-0 z-50 flex bg-neutral-200 p-6 shadow-md transition-all">
+      <Link legacyBehavior href="/">
         <a className="flex items-center text-xl text-neutral-500 transition-all hover:text-white active:text-orange-600">
           <div>d1</div>
           <div className="font-bold text-orange-600">dev</div>
@@ -48,11 +49,11 @@ export default function NavBar() {
           }`}
         >
           {navLinks.map((item) => (
-            <Link href={item.href} key={`navlink-${item.text}`}>
+            <Link legacyBehavior href={item.href} key={`navlink-${item.text}`}>
               <a
                 className={`font-medium transition active:text-orange-600
                 ${
-                  router.pathname === item.href
+                  pathname === item.href
                     ? "text-orange-600"
                     : "text-neutral-500 hover:text-white"
                 }`}

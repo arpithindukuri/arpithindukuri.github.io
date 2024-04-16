@@ -36,13 +36,13 @@ const Home: NextPage<Props> = () => {
       <div className="flex min-h-full w-full items-center justify-center">
         <div className="flex h-fit w-fit flex-col space-y-12">
           <Link href="/p">
-            <Button>Portfolio</Button>
+            <Button className="w-full">Portfolio</Button>
           </Link>
           <Link href="/about">
-            <Button>About</Button>
+            <Button className="w-full">About</Button>
           </Link>
           <Link href="/assets/Resume - Arpith (Daniel) Indukuri.pdf">
-            <Button>Resume</Button>
+            <Button className="w-full">Resume</Button>
           </Link>
         </div>
       </div>

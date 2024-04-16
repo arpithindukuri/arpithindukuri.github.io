@@ -9,7 +9,7 @@ import { IPost } from "../../types";
 import { getPost, getAllPosts } from "../../utils/mdxUtils";
 import { ParsedUrlQuery } from "querystring";
 import Tags from "../../components/Tags";
-import Image from "next/image";
+// import Image from "next/legacy/image";
 
 // props type
 type Props = {
