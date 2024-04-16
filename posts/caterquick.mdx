@@ -1,0 +1,85 @@
+---
+orderIndex: 5
+dateCreated: "2024-04-15"
+dateUpdated: "2024-04-15"
+title: CaterQuick
+description: Like AirBNB for catering.
+thumbnailPath: /assets/caterquick/thumbnail.png
+tags:
+  [
+    { name: "React", iconPath: "/assets/react-icon.png", color: "#51BBD8" },
+    { name: "Next.js", iconPath: "/assets/nextjs-icon.png", color: "#808080" },
+    {
+      name: "TypeScript",
+      iconPath: "/assets/typescript-icon.png",
+      color: "#007ACC",
+    },
+    { name: "Node.js", iconPath: "/assets/nodejs-icon.png", color: "#539E43" },
+    {
+      name: "Google Cloud Platform (todo)",
+      iconPath: "/assets/google-cloud-icon.png",
+      color: "#ea4335",
+    },
+    {
+      name: "SendGrid (todo)",
+      iconPath: "/assets/sendgrid-icon.png",
+      color: "#51a9e3",
+    },
+    { name: "MongoDB", iconPath: "/assets/mongodb-icon.png", color: "#6cac48" },
+    {
+      name: "NextAuth (todo)",
+      iconPath: "/assets/nextauth-icon.png",
+      color: "#e262eb",
+    },
+    {
+      name: "Stripe (todo)",
+      iconPath: "/assets/stripe-icon.png",
+      color: "#6772e5",
+    },
+    { name: "Vercel", iconPath: "/assets/vercel-icon.png", color: "#000000" },
+  ]
+---
+
+<img src="/assets/caterquick/thumbnail.png" alt="CaterQuick Thumbnail" />
+
+This app is like AirBNB for catering.
+It allows the user to find, book, and pay caterers in a single easy-to-use interface.
+Caterers get an additional funnel to gain customers, and can use the app to manage quotes and bookings.
+The app is still in development, and will be ready to use this year.
+
+CaterQuick is built using [Next.JS](https://nextjs.org/) (app router).
+It uses [Mantine UI](https://mantine.dev/) to provide a sleek, stylish, and user-friendly UI to manage caterer bookings.
+
+On the home screen, you can search for caterers in a city. (The hero image is AI-generated using Midjourney!)
+
+<img src="/assets/caterquick/image-1.png" alt="CaterQuick Home Page" />
+
+The search results show you a list of caterers in that city, along with ratings and other details.
+
+<img src="/assets/caterquick/image-2.png" alt="CaterQuick Search" />
+
+Clicking on a caterer will take you to their page, where you can see menu items with images and prices, and also request a quote.
+
+<img src="/assets/caterquick/image-3.png" alt="CaterQuick Caterer Page" />
+
+Requesting a quote allows you to enter in the event details, and select the menu items you want to order.
+
+<img src="/assets/caterquick/image-4.png" alt="CaterQuick Request a Quote" />
+
+When a quote is requested, the caterer gets an email notification (todo), and sees the details entered by the user.
+
+<img src="/assets/caterquick/image-5.png" alt="CaterQuick Quotes" />
+
+All the data is stored in MongoDB.
+
+<img src="/assets/caterquick/image-6.png" alt="CaterQuick MongoDB" />
+
+I am currently working on the following functionality
+
+- The caterer may then respond with a quote, and the user will be updated with an email notification, using SendGrid.
+- If the user agrees to the quote, the caterer will be notified through email, and they can move forward with the event.
+- The app will allow you to edit quotes as needed, and will notify both the caterer and the user about any subsequent changes.
+- When the event is done, the user will be able to pay for the event through the app, using stripe payments.
+- Caterers and users need to be signed in to go through the above process, which will require NextAuth to be implemented.
+
+Although much of the functionality is still in development, I am looking forward to finishing and publishing the site within the next few months!

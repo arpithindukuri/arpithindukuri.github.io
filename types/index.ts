@@ -1,4 +1,5 @@
 export interface IPost {
+  orderIndex: number;
   dateCreated: string;
   dateUpdated: string;
   title: string;
