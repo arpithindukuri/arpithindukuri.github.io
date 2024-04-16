@@ -11,7 +11,7 @@ type Props = {
 // component render function
 const Portfolio: NextPage<Props> = ({ posts }: Props) => {
   return (
-    <div className="space-y-16 px-8 py-4 md:px-16 xl:px-32">
+    <div className="space-y-16 px-4 py-4 md:px-16 xl:px-32">
       <div className="grid grid-cols-1 gap-8 md:grid-cols-2 md:gap-12 xl:grid-cols-3 xl:gap-16">
         {posts.map((post) => (
           <PortfolioCard key={post.slug} post={post} />
