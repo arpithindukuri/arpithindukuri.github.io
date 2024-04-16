@@ -41,6 +41,9 @@ const Home: NextPage<Props> = () => {
           <Link href="/about">
             <Button>About</Button>
           </Link>
+          <Link href="/assets/Resume - Arpith (Daniel) Indukuri.pdf">
+            <Button>Resume</Button>
+          </Link>
         </div>
       </div>
     </div>
