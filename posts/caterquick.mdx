@@ -3,7 +3,7 @@ orderIndex: 5
 dateCreated: "2024-04-15"
 dateUpdated: "2024-04-15"
 title: CaterQuick
-description: Like AirBNB for catering.
+description: A fullstack webapp with auth, managed postgresql, and analytics.
 thumbnailPath: /assets/caterquick/thumbnail.png
 tags:
   [
@@ -15,26 +15,11 @@ tags:
       color: "#007ACC",
     },
     { name: "Node.js", iconPath: "/assets/nodejs-icon.png", color: "#539E43" },
+    { name: "SupaBase", iconPath: "/assets/supabase-icon.png", color: "#3ecf8e" },
     {
-      name: "Google Cloud Platform (todo)",
-      iconPath: "/assets/google-cloud-icon.png",
-      color: "#ea4335",
-    },
-    {
-      name: "SendGrid (todo)",
-      iconPath: "/assets/sendgrid-icon.png",
-      color: "#51a9e3",
-    },
-    { name: "MongoDB", iconPath: "/assets/mongodb-icon.png", color: "#6cac48" },
-    {
-      name: "NextAuth (todo)",
-      iconPath: "/assets/nextauth-icon.png",
-      color: "#e262eb",
-    },
-    {
-      name: "Stripe (todo)",
-      iconPath: "/assets/stripe-icon.png",
-      color: "#6772e5",
+      name: "PostgreSQL (todo)",
+      iconPath: "/assets/postgresql-icon.png",
+      color: "#336791",
     },
     { name: "Vercel", iconPath: "/assets/vercel-icon.png", color: "#000000" },
   ]
@@ -42,7 +27,9 @@ tags:
 
 <img src="/assets/caterquick/thumbnail.png" alt="CaterQuick Thumbnail" />
 
-This app is like AirBNB for catering.
+**Live Demo:** [https://caterquick.app](https://caterquick.app)
+
+CaterQuick is a website to help customers find and book caterers, and caterers be found and booked - like AirBNB for catering.
 It allows the user to find, book, and pay caterers in a single easy-to-use interface.
 Caterers get an additional funnel to gain customers, and can use the app to manage quotes and bookings.
 The app is still in development, and will be ready to use this year.
@@ -54,9 +41,14 @@ On the home screen, you can search for caterers in a city. (The hero image is AI
 
 <img src="/assets/caterquick/image-1.png" alt="CaterQuick Home Page" />
 
-The search results show you a list of caterers in that city, along with ratings and other details.
+Customers can search for caterers by city, as well as (in the future) cuisines, event types, ratings, available dates, and more.
+I will also add the ability to upload the caterer's own pictures, showcasing events and food that they have previously catered.
 
 <img src="/assets/caterquick/image-2.png" alt="CaterQuick Search" />
+
+These caterers were collected from the Google Places API, but I am working on cold-outreach and online ads to get caterers to sign up themselves.
+
+<img src="/assets/caterquick/image-2.png" alt="CaterQuick Caterers CSV" />
 
 Clicking on a caterer will take you to their page, where you can see menu items with images and prices, and also request a quote.
 
@@ -66,13 +58,25 @@ Requesting a quote allows you to enter in the event details, and select the menu
 
 <img src="/assets/caterquick/image-4.png" alt="CaterQuick Request a Quote" />
 
-When a quote is requested, the caterer gets an email notification (todo), and sees the details entered by the user.
+When a quote is requested, the caterer gets an email notification (todo), and can see the details entered by the user on the site.
 
 <img src="/assets/caterquick/image-5.png" alt="CaterQuick Quotes" />
 
-All the data is stored in MongoDB.
+Caterers can respond to the requests, and customers can accept or decline the quotes, right from the site.
 
-<img src="/assets/caterquick/image-6.png" alt="CaterQuick MongoDB" />
+<img src="/assets/caterquick/image-8.png" alt="CaterQuick Quote" />
+
+Customers can accept or decline the quotes, and payment will be handled by the site as well using Stripe payments (todo).
+
+<img src="/assets/caterquick/image-9.png" alt="CaterQuick Quote Customer" />
+
+All the data is stored in Supabase using their managed PostgreSQL and auth.
+
+<img src="/assets/caterquick/image-6.png" alt="CaterQuick Supabase" />
+
+All endpoints are secured using Row Level Security.
+
+<img src="/assets/caterquick/image-7.png" alt="CaterQuick Supabase RLS" />
 
 I am currently working on the following functionality
 
