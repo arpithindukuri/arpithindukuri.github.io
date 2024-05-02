@@ -43,12 +43,9 @@ On the home screen, you can search for caterers in a city. (The hero image is AI
 
 Customers can search for caterers by city, as well as (in the future) cuisines, event types, ratings, available dates, and more.
 I will also add the ability to upload the caterer's own pictures, showcasing events and food that they have previously catered.
-
-<img src="/assets/caterquick/image-2.png" alt="CaterQuick Search" />
-
 These caterers were collected from the Google Places API, but I am working on cold-outreach and online ads to get caterers to sign up themselves.
 
-<img src="/assets/caterquick/image-2.png" alt="CaterQuick Caterers CSV" />
+<img src="/assets/caterquick/image-2.png" alt="CaterQuick Search" />
 
 Clicking on a caterer will take you to their page, where you can see menu items with images and prices, and also request a quote.
 
@@ -70,7 +67,7 @@ Customers can accept or decline the quotes, and payment will be handled by the s
 
 <img src="/assets/caterquick/image-9.png" alt="CaterQuick Quote Customer" />
 
-All the data is stored in Supabase using their managed PostgreSQL and auth.
+All the data used to be stored on MongoDB, but I recently migrated to Supabase because their auth is better integrated.
 
 <img src="/assets/caterquick/image-6.png" alt="CaterQuick Supabase" />
 
@@ -78,12 +75,13 @@ All endpoints are secured using Row Level Security.
 
 <img src="/assets/caterquick/image-7.png" alt="CaterQuick Supabase RLS" />
 
+This app has a fully functioning user authentication system, using email-password logins, including signup confirmation emails.
+
+<img src="/assets/caterquick/image-10.png" alt="CaterQuick Signup" />
+
 I am currently working on the following functionality
 
-- The caterer may then respond with a quote, and the user will be updated with an email notification, using SendGrid.
-- If the user agrees to the quote, the caterer will be notified through email, and they can move forward with the event.
-- The app will allow you to edit quotes as needed, and will notify both the caterer and the user about any subsequent changes.
+- The app will allow you to edit quotes as needed, and will notify both the caterer and the user about any subsequent changes via email, using Sendgrid.
 - When the event is done, the user will be able to pay for the event through the app, using stripe payments.
-- Caterers and users need to be signed in to go through the above process, which will require NextAuth to be implemented.
 
 Although much of the functionality is still in development, I am looking forward to finishing and publishing the site within the next few months!
